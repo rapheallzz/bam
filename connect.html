@@ -11,15 +11,32 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <style>
         .connect-hero {
-            padding: 100px 0 60px;
+            padding: 180px 0 80px;
             text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
         }
         .contact-form-container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--card-bg);
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
             padding: 60px;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--glass-border);
+            border-radius: 4px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+        .uk-input, .uk-select, .uk-textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 15px var(--accent-gold-glow);
         }
     </style>
 </head>
@@ -61,15 +78,16 @@
 </div>
 
 <section class="connect-hero">
-    <div class="uk-container">
-        <h1 class="uk-heading-medium">Let’s Connect</h1>
+    <div class="grid-bg"></div>
+    <div class="uk-container" style="position: relative; z-index: 1;">
+        <h1 class="hero-title reveal reveal-up active">Let’s Connect</h1>
         <p class="uk-text-large uk-container-small uk-margin-auto">Whether you’re looking to access the marketplace, explore partnership opportunities, or learn more about our approach, share a bit of context below and our team will follow up.</p>
     </div>
 </section>
 
-<section class="section-padding uk-padding-remove-top">
+<section class="section-padding uk-padding-remove-top" style="position: relative; margin-top: -60px; z-index: 2;">
     <div class="uk-container">
-        <div class="contact-form-container">
+        <div class="contact-form-container reveal reveal-up">
             <form id="connect-form" class="uk-form-stacked">
                 <div class="uk-grid-small uk-child-width-1-2@s" data-uk-grid>
                     <div>
@@ -156,6 +174,7 @@
 </footer>
 
 <script src="assets/js/vendors.min.js"></script>
+<script src="site.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLFS5KUUReSXVdp_wSKkfkATNkLWhsENxJJ19Gk12HDUkSKc1LIdhshVKpO5A-52uZrA/exec';

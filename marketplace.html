@@ -11,23 +11,28 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <style>
         .marketplace-hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1920') no-repeat center center;
             background-size: cover;
-            padding: 160px 0 100px;
+            padding: 180px 0 120px;
             text-align: center;
-        }
-        .pillar-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 40px;
-            height: 100%;
-            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
+        .pillar-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            height: 100%;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
         .pillar-card:hover {
             border-color: var(--accent-gold);
-            transform: translateY(-10px);
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 20px var(--accent-gold-glow);
         }
         .pillar-card h3 {
             color: var(--accent-gold);
@@ -94,8 +99,9 @@
 
 <!-- Section 1: Header -->
 <section class="marketplace-hero">
-    <div class="uk-container">
-        <h1 class="hero-title">The Marketplace</h1>
+    <div class="grid-bg"></div>
+    <div class="uk-container" style="position: relative; z-index: 1;">
+        <h1 class="hero-title reveal reveal-up active">The Marketplace</h1>
         <p class="hero-subtitle uk-margin-auto" style="border-left: none; padding-left: 0;">Programmatic Infrastructure for Black Streaming Audiences</p>
         <div class="uk-width-2-3@m uk-margin-auto">
             <p class="uk-text-large uk-margin-medium-bottom">BAM is not a traditional DSP or media vendor. It is a curated programmatic marketplace designed to enable disciplined, scalable transactions against Black audiences across CTV, FAST, and linear environments.</p>
@@ -105,21 +111,22 @@
 </section>
 
 <!-- Section 2: Built for How Television Buying Actually Works -->
-<section class="section-padding bg-dark-alt">
-    <div class="uk-container uk-container-small uk-text-center">
-        <h2 class="uk-heading-small">Built for How Television Buying Actually Works</h2>
+<section class="section-padding bg-dark-alt" style="position: relative;">
+    <div class="grid-bg"></div>
+    <div class="uk-container uk-container-small uk-text-center reveal reveal-up">
+        <h2 class="uk-heading-small">Built for How <span style="color: var(--accent-gold);">Television Buying Actually Works</span></h2>
         <p class="uk-text-large">Modern streaming requires more than access—it requires structure, control, and clarity. BAM is designed to operate with the rigor of television buying while unlocking the flexibility of programmatic execution.</p>
     </div>
 </section>
 
 <!-- Section 3: Agencies Can Access BAM in Three Ways -->
-<section class="section-padding">
+<section class="section-padding" style="position: relative;">
     <div class="uk-container">
-        <div class="uk-text-center uk-margin-large-bottom">
-            <h2 class="uk-heading-small">Agencies Can Access BAM in Three Ways</h2>
+        <div class="uk-text-center uk-margin-large-bottom reveal reveal-up">
+            <h2 class="uk-heading-small">Agencies Can Access BAM in <span style="color: var(--accent-gold);">Three Ways</span></h2>
         </div>
         <div class="uk-grid uk-grid-medium uk-child-width-1-3@m" data-uk-grid>
-            <div>
+            <div class="reveal reveal-up" style="transition-delay: 0.1s;">
                 <div class="pillar-card">
                     <h3>1. Curated PMP Access</h3>
                     <ul class="uk-list uk-list-bullet">
@@ -131,7 +138,7 @@
                     <div class="pillar-footer">Immediate Activation</div>
                 </div>
             </div>
-            <div>
+            <div class="reveal reveal-up" style="transition-delay: 0.2s;">
                 <div class="pillar-card">
                     <h3>2. Self-Service Platform Access</h3>
                     <ul class="uk-list uk-list-bullet">
@@ -146,7 +153,7 @@
                     <div class="pillar-footer">Infrastructure without external dependency.</div>
                 </div>
             </div>
-            <div>
+            <div class="reveal reveal-up" style="transition-delay: 0.3s;">
                 <div class="pillar-card">
                     <h3>3. Managed Execution</h3>
                     <ul class="uk-list uk-list-bullet">
@@ -165,28 +172,29 @@
 </section>
 
 <!-- Section 4: Why BAM -->
-<section class="section-padding bg-dark-alt">
+<section class="section-padding bg-dark-alt" style="position: relative;">
+    <div class="grid-bg"></div>
     <div class="uk-container uk-container-small">
-        <div class="uk-text-center uk-margin-large-bottom">
-            <h2 class="uk-heading-small">Why BAM</h2>
+        <div class="uk-text-center uk-margin-large-bottom reveal reveal-up">
+            <h2 class="uk-heading-small">Why <span style="color: var(--accent-gold);">BAM</span></h2>
         </div>
         <div class="uk-grid uk-child-width-1-2@s uk-grid-large" data-uk-grid>
-            <div>
+            <div class="reveal reveal-left">
                 <div class="insight-card">
                     <h4 class="uk-margin-remove">Curated, not open exchange</h4>
                 </div>
             </div>
-            <div>
+            <div class="reveal reveal-right">
                 <div class="insight-card">
                     <h4 class="uk-margin-remove">Built for CTV-first environments</h4>
                 </div>
             </div>
-            <div>
+            <div class="reveal reveal-left">
                 <div class="insight-card">
                     <h4 class="uk-margin-remove">Aligned to real audience behavior</h4>
                 </div>
             </div>
-            <div>
+            <div class="reveal reveal-right">
                 <div class="insight-card">
                     <h4 class="uk-margin-remove">Designed for allocation—not just targeting</h4>
                 </div>
@@ -196,11 +204,11 @@
 </section>
 
 <!-- Section 5: Cross Platform Capabilities -->
-<section class="section-padding">
+<section class="section-padding" style="position: relative;">
     <div class="uk-container">
         <div class="uk-grid uk-grid-large uk-flex-middle" data-uk-grid>
-            <div class="uk-width-1-2@m">
-                <h2 class="uk-heading-small">Cross Platform Capabilities</h2>
+            <div class="uk-width-1-2@m reveal reveal-left">
+                <h2 class="uk-heading-small">Cross Platform <span style="color: var(--accent-gold);">Capabilities</span></h2>
                 <div class="uk-grid uk-child-width-1-2@s" data-uk-grid>
                     <div>
                         <ul class="uk-list uk-list-bullet">
@@ -222,8 +230,8 @@
                     </div>
                 </div>
             </div>
-            <div class="uk-width-1-2@m uk-text-center">
-                <div class="phone-visual">
+            <div class="uk-width-1-2@m uk-text-center reveal reveal-right">
+                <div class="phone-visual" style="box-shadow: 0 0 40px var(--accent-gold-glow);">
                     <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400" alt="Mobile Phone Visual">
                 </div>
             </div>
@@ -267,5 +275,6 @@
 </footer>
 
 <script src="assets/js/vendors.min.js"></script>
+<script src="site.js"></script>
 </body>
 </html>
